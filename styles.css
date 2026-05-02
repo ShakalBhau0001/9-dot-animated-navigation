@@ -1,1 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: gray;
+}
+
+.navigation {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition-delay: 0.8s;
+}
+
+.navigation.active {
+  width: 200px;
+  height: 200px;
+  transition-delay: 0s;
+}
+
+.navigation span {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.navigation.active span {
+  width: 40px;
+  height: 40px;
+  background: #2b2f3a;
+  transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+}
+
+.navigation span ion-icon {
+  transition: 0.5s;
+  font-size: 0em;
+}
+
+.navigation.active span ion-icon {
+  font-size: 1.35em;
+  color: #fff;
+}
+
+.navigation.active span:hover ion-icon {
+  color: aqua;
+  filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52) drop-shadow(0 0 15px #2dfc52);
+}
+
+.navigation span:hover {
+  transform: scale(1.2) translate(calc(60px * var(--x)), calc(60px * var(--y)));
+}
+
+.navigation span:nth-child(7) {
+  background: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.label {
+  position: absolute;
+  bottom: -20px;
+  font-size: 10px;
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.navigation span:hover .label {
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .navigation.active {
+    width: 150px;
+    height: 150px;
+  }
+
+  .navigation.active span {
+    transform: translate(calc(45px * var(--x)), calc(45px * var(--y)));
+  }
+}
