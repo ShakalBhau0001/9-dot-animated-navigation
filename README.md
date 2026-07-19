@@ -11,6 +11,7 @@ This project showcases a compact navigation component that expands into a **grid
 ```bash
 9-dot-animated-navigation/
 │
+├── assets/            # Images / icons
 ├── index.html         # Structure of navigation menu
 ├── styles.css         # Styling and animations
 ├── app.js             # Toggle functionality
@@ -78,7 +79,7 @@ This project is built to:
 
 ```bash
 git clone https://github.com/ShakalBhau0001/9-dot-animated-navigation.git
-cd  9-dot-animated-navigation
+cd 9-dot-animated-navigation
 ```
 
 ### 2️⃣ Open the Project
@@ -104,6 +105,14 @@ No installation or setup required.
 * Improve mobile responsiveness
 * Add tooltip labels for icons
 * Introduce theme switch
+
+---
+
+## 📸 Preview
+
+![Rich CLI Preview](assets/9D1.png)
+
+![Rich CLI Preview](assets/9D2.png)
 
 ---
 
